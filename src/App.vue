@@ -1,15 +1,13 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <template>
-  <main>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </main>
+  <nav>
+    <RouterLink to="/">Log in</RouterLink>
+  </nav>
+  <RouterView />
 </template>
 
 <style>
-main{float: right}
 </style>
