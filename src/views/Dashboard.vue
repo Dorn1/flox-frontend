@@ -2,7 +2,9 @@
     <div class="container">
         <div class="dashboard">
             <Tools class="tools"/>
-            <Calendar class="calendar"/>
+            <Suspense>
+              <Calendar class="calendar"/>
+            </Suspense>
             <Chatbot class="chatbot"/>
         </div>
     </div>
