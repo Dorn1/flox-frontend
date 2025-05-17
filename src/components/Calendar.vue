@@ -10,7 +10,7 @@ let startDay;
 let today = new Date();
 let previousMonday = new Date(today.getTime() - (((today.getDay()+6)%7) * 1000*60*60*24))
 const mondayEvents = ref([]);
-let monday = axios.get("http://localhost:8080/getDay",{params:{userId:id,day:previousMonday.toString()}}).then((res)=>{mondayEvents.value = res.data});
+let monday = axios.get("http://localhost:8080//getEventsByDay",{params:{userId:1,day:previousMonday.toString()}}).then((res)=>{mondayEvents.value = res.data});
 
 </script>
 
