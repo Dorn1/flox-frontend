@@ -60,7 +60,7 @@ function deleteEvent(event_id) {
             <li>Work</li>
             <li>Work</li>
             <li></li>
-            <li></li>
+            <li>Gym</li>
             <li></li>
             <!--<li v-for="event in mondayEvents" :key="event.id">
               {{ event.title }} - {{ event.description }}
@@ -70,12 +70,12 @@ function deleteEvent(event_id) {
         <div class="calendar__day">
           <h2>Tuesday</h2>
           <ul>
+            <li>Work</li>
+            <li>Work</li>
+            <li>Work</li>
+            <li>Work</li>
             <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Friends Meeting</li>
             <li></li>
             <!--<li v-for="event in TuesdayEvents" :key="event.id">
               {{ event.title }} - {{ event.description }}
@@ -85,13 +85,13 @@ function deleteEvent(event_id) {
         <div class="calendar__day">
           <h2>Wednesday</h2>
           <ul>
+            <li>Work</li>
+            <li>Work</li>
+            <li>Work</li>
+            <li>Work</li>
+            <li>Family dinner</li>
             <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Football Workout</li>
             <!--<li v-for="event in mondayEvents" :key="event.id">
               {{ event.title }} - {{ event.description }}
             </li>-->
@@ -100,13 +100,13 @@ function deleteEvent(event_id) {
         <div class="calendar__day">
           <h2>Thursday</h2>
           <ul>
+            <li>Work</li>
+            <li>Work</li>
+            <li>Work</li>
+            <li>Work</li>
             <li></li>
             <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Movie Night</li>
             <!--<li v-for="event in mondayEvents" :key="event.id">
               {{ event.title }} - {{ event.description }}
             </li>-->
@@ -115,13 +115,13 @@ function deleteEvent(event_id) {
         <div class="calendar__day">
           <h2>Friday</h2>
           <ul>
+            <li>Work</li>
+            <li>Work</li>
+            <li>Work</li>
+            <li>Work</li>
             <li></li>
             <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Spanish Lesson</li>
             <!--<li v-for="event in mondayEvents" :key="event.id">
               {{ event.title }} - {{ event.description }}
             </li>-->
@@ -130,13 +130,13 @@ function deleteEvent(event_id) {
         <div class="calendar__day">
           <h2>Saturday</h2>
           <ul>
+            <li>House Cleaning</li>
+            <li>House Cleaning</li>
             <li></li>
+            <li>Family meeting</li>
             <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Party</li>
+            <li>Party</li>
             <!--<li v-for="event in mondayEvents" :key="event.id">
               {{ event.title }} - {{ event.description }}
             </li>-->
@@ -145,10 +145,10 @@ function deleteEvent(event_id) {
         <div class="calendar__day">
           <h2>Sunday</h2>
           <ul>
+            <li>Running Workout</li>
             <li></li>
             <li></li>
-            <li></li>
-            <li></li>
+            <li>Football match</li>
             <li></li>
             <li></li>
             <li></li>

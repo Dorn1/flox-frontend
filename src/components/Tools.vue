@@ -41,8 +41,7 @@
             </form>
         </transition>
 
-        <div v-if="suggestedEvents.length">
-          <h3>Suggested Events</h3>
+        <div v-if="suggestedEvents != ''">
           {{suggestedEvents.value}}
       </div>
     </aside>
@@ -137,6 +136,7 @@ async function onSubmit() {
     )
 
       suggestedEvents = response.data;
+      messages.value.push({ sender: "flox", text: suggestedEvents })
 
       console.log('Suggested events:', suggestedEvents)
 
