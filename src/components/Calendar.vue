@@ -2,6 +2,7 @@
 import {useRoute} from 'vue-router';
 import {ref} from "vue";
 import axios from "axios";
+import router from "@/router/index.js";
 
 const route = useRoute();
 const id = route.params.id;
@@ -36,9 +37,9 @@ const SundayEvents = ref([]);
   SundayEvents.value.push(response6.data);
 
 
-function deleteEvent(id) {
-  axios.delete(`http://localhost:8080/deleteEvent/${id}`);
-  route("/dashboard/"+id).push();
+function deleteEvent(event_id) {
+  axios.delete("http://localhost:8080/events/deleteEvent?eventId="+event_id);
+  router.push("/dashboard/"+id);
 }
 
 </script>
@@ -55,6 +56,7 @@ function deleteEvent(id) {
           <div class="card">
             Title: {{ item[0].title }}
             Description: {{ item[0].description }}
+            <button @click="deleteEvent(item[0].id)" class="delete">delete</button>
           </div>
         </ul>
       </div>
@@ -68,6 +70,7 @@ function deleteEvent(id) {
             <div class="card">
               Title: {{ item[0].title }}
               Description: {{ item[0].description }}
+              <button @click="deleteEvent(item[0].id)" class="delete">delete</button>
             </div>
           </ul>
         </div>
@@ -81,6 +84,7 @@ function deleteEvent(id) {
             <div class="card">
               Title: {{ item[0].title }}
               Description: {{ item[0].description }}
+              <button @click="deleteEvent(item[0].id)" class="delete">delete</button>
             </div>
           </ul>
         </div>
@@ -94,6 +98,7 @@ function deleteEvent(id) {
             <div class="card">
               Title: {{ item[0].title }}
               Description: {{ item[0].description }}
+              <button @click="deleteEvent(item[0].id)" class="delete">delete</button>
             </div>
           </ul>
         </div>
@@ -107,6 +112,7 @@ function deleteEvent(id) {
             <div class="card">
               Title: {{ item[0].title }}
               Description: {{ item[0].description }}
+              <button @click="deleteEvent(item[0].id)" class="delete">delete</button>
             </div>
           </ul>
         </div>
@@ -120,6 +126,7 @@ function deleteEvent(id) {
             <div class="card">
               Title: {{ item[0].title }}
               Description: {{ item[0].description }}
+              <button @click="deleteEvent(item[0].id)" class="delete">delete</button>
             </div>
           </ul>
         </div>
@@ -133,6 +140,7 @@ function deleteEvent(id) {
             <div class="card">
               Title: {{ item[0].title }}
               Description: {{ item[0].description }}
+              <button @click="deleteEvent(item[0].id)" class="delete">delete</button>
             </div>
           </ul>
         </div>
