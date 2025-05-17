@@ -1,7 +1,10 @@
 <template>
-    <div class="dashboard">
-        <Chatbot />
-        <Tools />
+    <div class="container">
+        <div class="dashboard">
+            <Tools class="tools"/>
+            <Calendar class="calendar"/>
+            <Chatbot class="chatbot"/>
+        </div>
     </div>
 </template>
 
@@ -9,3 +12,8 @@
 import Chatbot from "../components/Chatbot.vue"
 import Tools from "../components/Tools.vue"
 </script>
+</script>
+
+<style scoped>
+@import url("../assets/dashboard.css");
+</style>
