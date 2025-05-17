@@ -40,7 +40,7 @@ const login = async () => {
         const userId = response.data
         console.log('Logged in, user ID:', userId)
 
-        router.push('/dashboard')
+        router.push('/dashboard/'+userId)
     } catch (error) {
         if (error.response && error.response.status === 401) {
             errorMessage.value = 'Invalid credentails. PLease try again.'
