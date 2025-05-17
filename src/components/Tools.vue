@@ -41,9 +41,7 @@
             </form>
         </transition>
 
-        <div v-if="suggestedEvents != ''">
-          {{suggestedEvents.value}}
-      </div>
+          {{suggestedEvents}}
     </aside>
 </template>
 
