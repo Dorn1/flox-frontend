@@ -1,16 +1,15 @@
 <script setup>
-import {watch} from "vue";
 import { useRoute } from 'vue-router';
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 import axios from "axios";
 
 const route = useRoute();
 const id = route.params.id;
 let startDay;
 let today = new Date();
-let previousMonday = new Date(today.getTime() - (((today.getDay()+6)%7) * 1000*60*60*24))
 const mondayEvents = ref([]);
-let monday = axios.get("http://localhost:8080//getEventsByDay",{params:{userId:1,day:previousMonday.toString()}}).then((res)=>{mondayEvents.value = res.data});
+await axios.post("http://localhost:8080//getEventsByDay",{userId:1,
+  day:"2025-05-12T00:00:00.000Z"}).then((response) => {mondayEvents.value = response.data;});
 
 </script>
 
