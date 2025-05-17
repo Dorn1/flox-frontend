@@ -4,7 +4,7 @@ import Signup from "@/views/Signup.vue";
 import Dashboard from "@/views/Dashboard.vue";
 
 const routes = [
-    { path: "/", redirect: '/login' },
+    { path: "/", redirect: '/register' },
     { path: "/login", component: Login },
     { path: "/register", component: Signup },
     { path: "/dashboard", component: Dashboard},
