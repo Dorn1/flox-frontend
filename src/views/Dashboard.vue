@@ -3,7 +3,7 @@
         <div class="dashboard">
             <Tools class="tools"/>
             <Suspense>
-              <Calendar class="calendar"/>
+                <Calendar class="calendar"/>
             </Suspense>
             <Chatbot class="chatbot"/>
         </div>
@@ -13,7 +13,7 @@
 <script setup>
 import Chatbot from "../components/Chatbot.vue"
 import Tools from "../components/Tools.vue"
-import Calendar from "@/components/Calendar.vue";
+import Calendar from "../components/Calendar.vue";
 </script>
 
 <style scoped>
