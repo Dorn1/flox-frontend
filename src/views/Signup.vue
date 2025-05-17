@@ -1,20 +1,25 @@
 <template>
-    <div class="signup auth-form">
-        <h2 class="auth-form__title signup__title">Sign Up</h2>
-        <form @submit.prevent="signup">
-            <div>
-                <label for="username">Username:</label>
-                <input v-model="username" type="text" id="username" required>
+    <div class="container">
+        <img src="../assets/fox.svg" alt="FLOX" class="image">
+        <div class="signup auth-form">
+            <h2 class="auth-form__title signup__title">Sign Up</h2>
+            <form @submit.prevent="signup">
+                <div class="input-container">
+                    <label for="username">Username:</label>
+                    <input v-model="username" type="text" id="username" required>
+                </div>
+                <div class="input-container">
+                    <label for="password">Password:</label>
+                    <input v-model="password" type="password" id="password" required>
+                </div>
+                <button type="submit">Register</button>
+                <p v-if="successMessage" class="success">{{ successMessage }}</p>
+                <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
+            </form>
+            <div class="router-link">
+                <RouterLink to="/" class="login-link"><span>Already have an account? Log in here.</span></RouterLink>
             </div>
-            <div>
-                <label for="password">Password:</label>
-                <input v-model="password" type="password" id="password" required>
-            </div>
-            <button type="submit">Register</button>
-            <p v-if="successMessage" class="success">{{ successMessage }}</p>
-            <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
-        </form>
-        <RouterLink to="/">Already have an account? Log in here.</RouterLink>
+        </div>
     </div>
 </template>
 
@@ -54,3 +59,7 @@ const signup = async () => {
     }
 }
 </script>
+
+<style scoped>
+@import url("../assets/login-signup.css");
+</style>

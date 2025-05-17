@@ -1,18 +1,21 @@
 <template>
-    <div class="login auth-from">
-        <h2 class="auth-form__tile login__title">Login</h2>
-        <form @submit.prevent="login">
-            <div>
-                <label for="username">Username:</label>
-                <input v-model="username" type="text" id="username" placeholder="Username" required>
-            </div>
-            <div>
-                <label for="password">Password:</label>
-                <input v-model="password" type="password" id="password" placeholder="Password" required>
-            </div>
-            <button type="submit">Login</button>
-        </form>
-        <p v-if="errorMessage" class="error"> {{ errorMessage }}</p>
+    <div class="container">
+        <img src="../assets/fox.svg" alt="FLOX" class="image">
+        <div class="login auth-from">
+            <h2 class="auth-form__title login__title">Login</h2>
+            <form @submit.prevent="login">
+                <div class="input-container">
+                    <label for="username">Username:</label>
+                    <input v-model="username" type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-container">
+                    <label for="password">Password:</label>
+                    <input v-model="password" type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p v-if="errorMessage" class="error"> {{ errorMessage }}</p>
+        </div>
     </div>
 </template>
 
@@ -47,3 +50,7 @@ const login = async () => {
     }
 }
 </script>
+
+<style scoped>
+@import url("../assets/login-signup.css");
+</style>
