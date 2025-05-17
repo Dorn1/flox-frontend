@@ -1,13 +1,18 @@
 <template>
     <div class="chatbot">
-        <div class="chatbot__window">
-            <div v-for="(msg, index) in messages" :key="index" class="chatbot__message">
-                <strong>{{ msg.sender }}:</strong> {{ msg.text }}
+        <img src="../assets/fox.svg" alt="FLOX" class="chatbot__image">
+        <div class="chatbot-view__container">
+            <div class="chatbot__window">
+                <div v-for="(msg, index) in messages" :key="index" class="chatbot__message">
+                    <span class="chatbot__sender">{{ msg.sender }}:</span> <span class="chatbot__text">{{ msg.text }}</span>
+                </div>
             </div>
         </div>
-        <div class="chatbot__input">
-            <input v-model="input" @keydown.enter="sendMessage" type="text" placeholder="Ask me something...">
-            <button @click="sendMessage">Send</button>
+        <div class="chatbot-control__container">
+            <div class="chatbot__control">
+                <input v-model="input" @keydown.enter="sendMessage" type="text" placeholder="Ask me something..." class="chatbot__input">
+                <button @click="sendMessage" class="chatbot__button">Send</button>
+            </div>
         </div>
     </div>
 </template>
@@ -31,12 +36,12 @@ const sendMessage = async () => {
         })
 
         messages.value.push({
-            sender: "Fox",
+            sender: "Flox",
             text: response.data,
         })
     } catch (error) {
         messages.value.push({
-            sender: "Fox",
+            sender: "Flox",
             text: "Sorry, something went wrong. Try again later.",
         })
         console.error(error)
@@ -46,3 +51,7 @@ const sendMessage = async () => {
 
 
 </script>
+
+<style scoped>
+@import url("../assets/chatbot.css");
+</style>

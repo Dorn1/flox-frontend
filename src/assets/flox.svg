@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Warstwa_1" data-name="Warstwa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 334.92 238.06">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff7f5c;
+        font-family: EulogyDemo-Bold, 'Eulogy Demo';
+        font-size: 214.6px;
+        font-weight: 700;
+        stroke: #ffbea8;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(.5 183.91) scale(1.08 1)"><tspan class="cls-4" x="0" y="0">fl</tspan><tspan class="cls-3" x="101.08" y="0">o</tspan><tspan class="cls-2" x="201.94" y="0">x</tspan></text>
+  <text class="cls-1" transform="translate(1.5 182.91) scale(1.08 1)"><tspan class="cls-4" x="0" y="0">fl</tspan><tspan class="cls-3" x="101.08" y="0">o</tspan><tspan class="cls-2" x="201.94" y="0">x</tspan></text>
+</svg>
