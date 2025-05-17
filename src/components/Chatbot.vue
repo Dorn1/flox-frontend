@@ -29,6 +29,11 @@ const sendMessage = async () => {
         const response = await axios.post('http://localhost:8080/dashboard/chatbot', {
             message: trimmed,
         })
+
+        messages.value.push({
+            sender: "Fox",
+            text: response.data,
+        })
     } catch (error) {
         messages.value.push({
             sender: "Fox",
