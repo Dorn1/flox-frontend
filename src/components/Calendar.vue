@@ -8,32 +8,39 @@ const id = route.params.id;
 let startDay;
 let today = new Date();
 const mondayEvents = ref([]);
-const response = await axios.post("http://localhost:8080/getEventsByDay?userId=1&day=2025-05-12T00:00:00");
-mondayEvents.value.push(response.data);
-
 const TuesdayEvents = ref([]);
-const response1 = await axios.post("http://localhost:8080/getEventsByDay?userId=1&day=2025-05-13T00:00:00");
-TuesdayEvents.value.push(response1.data);
-
 const wednesdayEvents = ref([]);
-const response2 = await axios.post("http://localhost:8080/getEventsByDay?userId=1&day=2025-05-14T00:00:00");
-wednesdayEvents.value.push(response2.data);
-
 const ThursdayEvents = ref([]);
-const response3 = await axios.post("http://localhost:8080/getEventsByDay?userId=1&day=2025-05-15T00:00:00");
-ThursdayEvents.value.push(response3.data);
-
 const FridayEvents = ref([]);
-const response4 = await axios.post("http://localhost:8080/getEventsByDay?userId=1&day=2025-05-16T00:00:00");
-FridayEvents.value.push(response4.data);
-
 const SaturdayEvents = ref([]);
-const response5 = await axios.post("http://localhost:8080/getEventsByDay?userId=1&day=2025-05-17T00:00:00");
-SaturdayEvents.value.push(response5.data);
-
 const SundayEvents = ref([]);
-const response6 = await axios.post("http://localhost:8080/getEventsByDay?userId=1&day=2025-05-18T00:00:00");
-SundayEvents.value.push(response6.data);
+  let response = await axios.post("http://localhost:8080/getEventsByDay?userId="+id+"&day=2025-05-12T00:00:00");
+  mondayEvents.value.push(response.data);
+
+  let response1 = await axios.post("http://localhost:8080/getEventsByDay?userId="+id+"&day=2025-05-13T00:00:00");
+  TuesdayEvents.value.push(response1.data);
+
+  let response2 = await axios.post("http://localhost:8080/getEventsByDay?userId="+id+"&day=2025-05-14T00:00:00");
+  wednesdayEvents.value.push(response2.data);
+
+  let response3 = await axios.post("http://localhost:8080/getEventsByDay?userId="+id+"&day=2025-05-15T00:00:00");
+  ThursdayEvents.value.push(response3.data);
+
+  let response4 = await axios.post("http://localhost:8080/getEventsByDay?userId="+id+"&day=2025-05-16T00:00:00");
+  FridayEvents.value.push(response4.data);
+
+  let response5 = await axios.post("http://localhost:8080/getEventsByDay?userId="+id+"&day=2025-05-17T00:00:00");
+  SaturdayEvents.value.push(response5.data);
+
+  let response6 = await axios.post("http://localhost:8080/getEventsByDay?userId="+id+"&day=2025-05-18T00:00:00");
+  SundayEvents.value.push(response6.data);
+
+
+function deleteEvent(id) {
+  axios.delete(`http://localhost:8080/deleteEvent/${id}`);
+  route("/dashboard/"+id).push();
+}
+
 </script>
 
 <template>

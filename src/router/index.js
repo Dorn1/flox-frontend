@@ -8,7 +8,7 @@ const routes = [
     { path: "/", redirect: '/login' },
     { path: "/login", component: Login },
     { path: "/register", component: Signup },
-    { path: "/dashboard", component: Dashboard},
+    { path: "/dashboard/:id", component: Dashboard},
 ]
 
 export default createRouter({
