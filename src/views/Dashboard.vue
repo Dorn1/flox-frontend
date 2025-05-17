@@ -10,6 +10,8 @@
 
 <script setup>
 import Chatbot from "../components/Chatbot.vue"
+import Tools from "../components/Tools.vue"
+</script>
 </script>
 
 <style scoped>
