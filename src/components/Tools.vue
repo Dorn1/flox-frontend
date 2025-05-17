@@ -40,6 +40,11 @@
                 <button type="submit" class="tools__button">send</button>
             </form>
         </transition>
+
+        <div v-if="suggestedEvents.length">
+          <h3>Suggested Events</h3>
+          {{suggestedEvents.value}}
+      </div>
     </aside>
 </template>
 
@@ -57,6 +62,8 @@ const form = reactive({
     occurrences: 1,
     deadline: ''          // YYYY-MM-DDTHH:mm
 })
+
+let suggestedEvents = '';
 
 function select(option) {
     selected.value = selected.value === option ? null : option
@@ -129,7 +136,13 @@ async function onSubmit() {
         { headers: { 'Content-Type': 'application/json' } }
     )
 
-    console.log('AI suggestion:', response.data)
+      suggestedEvents = response.data;
+
+      console.log('Suggested events:', suggestedEvents)
+
+        // handle the response as needed
+        // e.g. update the UI, show a notification, etc.
+        // for example, you could set a state variable to show the suggested events 
       // you could also emit an event or display it in the UI
     } catch (err) {
         console.error('Error calling suggest-event-time:', err)

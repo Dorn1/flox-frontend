@@ -45,7 +45,133 @@ function deleteEvent(event_id) {
 </script>
 
 <template>
-  <main>
+  <div class="calendar">
+    <div class="calendar__container">
+      <div class="calendar__header">
+        <h1>Calendar</h1>
+      </div>
+      <div class="calendar__body">
+      
+        <div class="calendar__day">
+          <h2>Monday</h2>
+          <ul>
+            <li>Work</li>
+            <li>Work</li>
+            <li>Work</li>
+            <li>Work</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <!--<li v-for="event in mondayEvents" :key="event.id">
+              {{ event.title }} - {{ event.description }}
+            </li>-->
+          </ul>
+        </div>
+        <div class="calendar__day">
+          <h2>Tuesday</h2>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <!--<li v-for="event in TuesdayEvents" :key="event.id">
+              {{ event.title }} - {{ event.description }}
+            </li>-->
+          </ul>
+        </div>
+        <div class="calendar__day">
+          <h2>Wednesday</h2>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <!--<li v-for="event in mondayEvents" :key="event.id">
+              {{ event.title }} - {{ event.description }}
+            </li>-->
+          </ul>
+        </div>
+        <div class="calendar__day">
+          <h2>Thursday</h2>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <!--<li v-for="event in mondayEvents" :key="event.id">
+              {{ event.title }} - {{ event.description }}
+            </li>-->
+          </ul>
+        </div>
+        <div class="calendar__day">
+          <h2>Friday</h2>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <!--<li v-for="event in mondayEvents" :key="event.id">
+              {{ event.title }} - {{ event.description }}
+            </li>-->
+          </ul>
+        </div>
+        <div class="calendar__day">
+          <h2>Saturday</h2>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <!--<li v-for="event in mondayEvents" :key="event.id">
+              {{ event.title }} - {{ event.description }}
+            </li>-->
+          </ul>
+        </div>
+        <div class="calendar__day">
+          <h2>Sunday</h2>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <!--<li v-for="event in mondayEvents" :key="event.id">
+              {{ event.title }} - {{ event.description }}
+            </li>-->
+          </ul>
+        </div>
+        <ul>
+          <li>7</li>
+          <li>9</li>
+          <li>11</li>
+          <li>13</li>
+          <li>15</li>
+          <li>17</li>
+          <li>19</li>
+          <li>21</li>
+        </ul>
+        <!-- Repeat for other days -->
+      </div>
+    </div>
+  </div>
+  <!--<main>
     <table>
       <tr>
       <div class="dayTag">
@@ -146,11 +272,12 @@ function deleteEvent(event_id) {
         </div>
       </tr>
     </table>
-  </main>
+  </main>-->
 </template>
 
 <style scoped>
-.dayTag{
+@import url("../assets/calendar.css");
+/*.dayTag{
   background-color: #c2185b;
   color: white;
   padding: 2px;
@@ -175,5 +302,5 @@ table tr {
 
 table tr td {
   display: block;
-}
+}*/
 </style>
