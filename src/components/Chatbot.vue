@@ -26,7 +26,7 @@ const sendMessage = async () => {
     messages.value.push({ sender: "You", text: trimmed })
 
     try {
-        const response = await axios.post('http://localhost:8080/dashboard/chatbot', {
+        const response = await axios.post('http://localhost:8080/chatbot', {
             message: trimmed,
         })
 
