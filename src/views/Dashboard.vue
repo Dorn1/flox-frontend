@@ -12,7 +12,6 @@
 import Chatbot from "../components/Chatbot.vue"
 import Tools from "../components/Tools.vue"
 </script>
-</script>
 
 <style scoped>
 @import url("../assets/dashboard.css");

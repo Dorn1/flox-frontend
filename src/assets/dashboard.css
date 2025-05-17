@@ -6,7 +6,6 @@
 .dashboard {
     max-width: 1400px;
     overflow: hidden;
-    margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:

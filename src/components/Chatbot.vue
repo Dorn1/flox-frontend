@@ -11,7 +11,7 @@
         <div class="chatbot-control__container">
             <div class="chatbot__control">
                 <input v-model="input" @keydown.enter="sendMessage" type="text" placeholder="Ask me something..." class="chatbot__input">
-                <button @click="sendMessage" class="chatbot__button">Send</button>
+                <button @click="sendMessage" class="chatbot__button">send</button>
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@ const sendMessage = async () => {
     const trimmed = input.value.trim()
     if (!trimmed) return
 
-    messages.value.push({ sender: "You", text: trimmed })
+    messages.value.push({ sender: "you", text: trimmed })
 
     try {
         const response = await axios.post('http://localhost:8080/chatbot', {
@@ -36,12 +36,12 @@ const sendMessage = async () => {
         })
 
         messages.value.push({
-            sender: "Flox",
+            sender: "flox",
             text: response.data,
         })
     } catch (error) {
         messages.value.push({
-            sender: "Flox",
+            sender: "flox",
             text: "Sorry, something went wrong. Try again later.",
         })
         console.error(error)

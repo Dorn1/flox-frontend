@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import Login from '@/views/Login.vue';
 import Signup from "@/views/Signup.vue";
 import Dashboard from "@/views/Dashboard.vue";
-import Chatbot from "@/components/Chatbot.vue"
 
 const routes = [
     { path: "/", redirect: '/login' },

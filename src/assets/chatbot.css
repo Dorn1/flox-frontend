@@ -8,6 +8,7 @@
 
 .chatbot__image {
     max-height: 200px;
+    margin-top: 10px;
 }
 
 .chatbot-view__container {
